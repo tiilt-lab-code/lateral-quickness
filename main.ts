@@ -1,6 +1,6 @@
 radio.onReceivedNumber(function (receivedNumber) {
     if (anchor == 0 && running == 1) {
-        if (radio.receivedPacket(RadioPacketProperty.SignalStrength) >= -50) {
+        if (radio.receivedPacket(RadioPacketProperty.SignalStrength) >= -40) {
             music.play(music.tonePlayable(262, music.beat(BeatFraction.Eighth)), music.PlaybackMode.InBackground)
             count += 1
             if (radio_channel == 0) {
