@@ -60,7 +60,11 @@ loops.everyInterval(100, function () {
         radio.sendNumber(0)
     } else {
         if (running == 1) {
-            if (input.runningTime() - start_time >= 15000) {
+            led.plotBarGraph(
+            count,
+            15
+            )
+            if (input.runningTime() - start_time >= 30000) {
                 music.play(music.builtinPlayableSoundEffect(soundExpression.spring), music.PlaybackMode.UntilDone)
                 basic.showNumber(count)
                 running = 0
