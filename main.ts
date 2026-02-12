@@ -1,7 +1,7 @@
 radio.onReceivedNumber(function (receivedNumber) {
     if (anchor == 0 && running == 1) {
         if (radio.receivedPacket(RadioPacketProperty.SignalStrength) >= -40) {
-            music.play(music.tonePlayable(262, music.beat(BeatFraction.Eighth)), music.PlaybackMode.InBackground)
+            music.play(music.tonePlayable(262, music.beat(BeatFraction.Breve)), music.PlaybackMode.InBackground)
             count += 1
             if (radio_channel == 0) {
                 radio_channel = 1
@@ -52,6 +52,7 @@ anchor = 0
 radio_channel = 0
 radio.setGroup(radio_channel)
 radio.setTransmitPower(7)
+music.setVolume(255)
 basic.showIcon(IconNames.Tortoise)
 loops.everyInterval(100, function () {
     if (anchor == 1) {
